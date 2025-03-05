@@ -1,0 +1,26 @@
+.genre-filter {
+    max-height: 400px;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.genre-filter-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.genre-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.genre-item.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.genre-item:hover {
+    background-color: #f0f0f0;
+}

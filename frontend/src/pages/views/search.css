@@ -1,0 +1,12 @@
+.link-button {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #1976d2; /* Default blue */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.link-button:hover {
+    color: #1565c0; /* Darker blue on hover */
+}

@@ -1,0 +1,32 @@
+
+.container-nav{
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.userPic-login{
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.sticky-top{
+    margin-bottom: 0 !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: green !important;
+}
+
+.customDropdownButton:hover {
+    color: #000000 !important;
+}
+
+.customDropdownButton.expanded {
+    color: green !important;
+}
+
+.custom-dropdown .dropdown-menu {
+    transform: translateX(-80px); /* Ajusta para desplazarlo más a la izquierda */
+}

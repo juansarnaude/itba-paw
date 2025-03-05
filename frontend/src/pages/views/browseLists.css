@@ -1,0 +1,11 @@
+.browse-lists-header{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.browse-list-header-searchable{
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    margin-top: 0.5rem;
+}

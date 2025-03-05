@@ -1,0 +1,16 @@
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.movingContainer {
+    animation: moveRightToLeft 60s linear infinite;
+}
+
+.movingContainer2 {
+    animation: moveRightToLeft 120s linear reverse infinite;
+}

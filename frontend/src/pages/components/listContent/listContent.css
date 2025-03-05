@@ -1,0 +1,151 @@
+.list-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.media-header, .media-row {
+    display: grid;
+    grid-template-columns: 50px minmax(200px, 1fr)  100px 100px 100px 50px;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 16px;
+}
+
+.media-header {
+    font-weight: 600;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    color: #495057;
+}
+
+.media-row {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.media-row:hover {
+    background-color: #f8f9fa;
+}
+
+.media-title-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.media-image {
+    width: 45px;
+    height: 67.5px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.media-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.media-name {
+    font-weight: 500;
+    color: #212529;
+}
+
+.media-type {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.media-score {
+    font-weight: 500;
+    color: #495057;
+}
+
+.media-release {
+    color: #6c757d;
+}
+
+.media-row.dragging {
+    opacity: 0.5;
+    background-color: #e9ecef;
+    cursor: grabbing !important;
+}
+
+.media-row.drag-over {
+    border: 2px dashed #0d6efd;
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    color: #6c757d;
+    transition: all 0.2s ease;
+}
+
+.menu-button:hover {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+.menu-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.menu-dropdown button {
+    margin: 4px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.list-actions-container {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding-top: 0rem;
+}
+
+.list-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* Remove these scrollbar styles since we're no longer using horizontal scroll */
+.list-card-container::-webkit-scrollbar,
+.list-card-container::-webkit-scrollbar-track,
+.list-card-container::-webkit-scrollbar-thumb,
+.list-card-container::-webkit-scrollbar-thumb:hover {
+    display: none;
+}
+
+/* Remove the fixed width constraints to allow cards to be responsive */
+.list-card-container > * {
+    width: 100%;
+    max-width: none;
+}
+

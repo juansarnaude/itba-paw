@@ -1,0 +1,119 @@
+/* Base card styles */
+.media-card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Small card variant */
+.media-card-small {
+    width: 160px;
+    height: 240px;
+    margin: 0; /* Remove margin since we're using grid gap */
+}
+
+.media-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Card border */
+.media-card-border {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 3px solid lightblue;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Image styles */
+.media-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Overlay styles */
+.media-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    text-align: center;
+}
+
+/* Title and details */
+.media-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.media-card-overlay h5 {
+    margin: 5px 0;
+}
+
+/* Buttons */
+.media-card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.media-card-button {
+    padding: 8px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-card-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Hide overlay when not hovered */
+.media-card .media-card-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.media-card.hovered .media-card-overlay {
+    opacity: 1;
+}
+
+/* Add this at the end of the file */
+[data-tooltip-id] {
+    z-index: 1000;
+}
+
+[data-tooltip-content] {
+    z-index: 1000;
+}
+
+/* Ensure tooltips are always on top */
+.react-tooltip {
+    z-index: 1000 !important;
+}

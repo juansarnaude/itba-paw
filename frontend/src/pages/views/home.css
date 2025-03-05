@@ -1,0 +1,84 @@
+/* General Styles */
+.moovie-default {
+    background-color: #f4f4f9; /* Light background for a clean feel */
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero-text {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Section container */
+.section-container {
+    margin-bottom: 3rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.see-more-button {
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-button:hover {
+    background-color: #218838;
+}
+
+/* Cards Container */
+.CardsHorizontalContainer {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .section-header h3 {
+        font-size: 1.5rem;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+}
+
+.link-button {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #1976d2; /* Default blue */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.link-button:hover {
+    color: #1565c0; /* Darker blue on hover */
+}

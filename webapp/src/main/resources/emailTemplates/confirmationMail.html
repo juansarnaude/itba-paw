@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        .media-container {
+            display: flex;
+            align-items: center;
+        }
+        .media-container img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body th:style="'font-family: Arial, sans-serif; background-color: #f4f4f4;'">
+    <div th:style="'max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);'">
+        <a th:href="@{${basePath}}" class="media-container" th:style="'text-decoration: none; color: inherit;'">
+            <img th:style="'width:40px;height:40px;margin-right:10px;'"
+                 th:src="@{https://64.media.tumblr.com/41d36d56cc6f1cb18f71f8758d804084/fd6f2186ad840a10-43/s540x810/d1831360ce15f4e26c55659ce8d065ff311fb6c3.png}"
+                 alt="Logo">
+            <h1 th:style="'margin: 10px; color: black; text-decoration: none;'"
+                th:text="#{email.logo}"></h1>
+        </a>
+        <h2 th:text="#{email.greeting}"/>
+        <p th:text="#{email.welcome (${username})}"/>
+        <p th:text="#{email.confirmation}"/>
+        <a th:href="@{${basePath} + '/register/confirm'(token=${token}, user=${username})}"
+           th:text="#{email.verify}"
+           th:style="'display: inline-block; padding: 10px 20px; background-color: green; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 10px;'">
+        </a>
+    </div>
+</body>
+</html>
+
+<!--<a th:href="@{http://pawserver.it.itba.edu.ar/paw-2023b-06/register/confirm(token=${token})}">-->

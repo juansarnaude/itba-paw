@@ -1,0 +1,12 @@
+.custom-nav .nav-link {
+    color: green; 
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.custom-nav .nav-link.active {
+    background-color: green;
+    color: white;
+}

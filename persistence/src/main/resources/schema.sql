@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS reviews(
     mediaId                                     INTEGER NOT NULL,
     rating                                      INTEGER NOT NULL CHECK(rating BETWEEN 1 AND 5),
     reviewContent                               TEXT,
-    lastModified                                TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    lastModified                                TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY(userId) REFERENCES users(userId) ON DELETE CASCADE,
     FOREIGN KEY(mediaId) REFERENCES media(mediaId) ON DELETE CASCADE,
     UNIQUE(userId,mediaId)
@@ -300,7 +300,7 @@ CREATE TABLE IF NOT EXISTS moovieListsReviews(
     userId                                      INTEGER NOT NULL,
     moovieListId                                INTEGER NOT NULL,
     reviewContent                               TEXT,
-    lastModified                                TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    lastModified                                TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY(userId) REFERENCES users(userId) ON DELETE CASCADE,
     FOREIGN KEY(moovieListId) REFERENCES moovieLists(moovieListId) ON DELETE CASCADE,
     UNIQUE(userId,moovieListId)
